@@ -1,5 +1,5 @@
 import './sass/style.scss';
 
-let demo = 'world';
+const demo = 'world yeah';
 
 console.log(`hello ${demo}`);
