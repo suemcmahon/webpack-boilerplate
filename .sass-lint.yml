@@ -1,0 +1,3 @@
+files:
+  ignore:
+    - 'src/sass/base/_reset.scss'

@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const SassLintPlugin = require('sass-lint-webpack');
 
 module.exports = {
   entry: './src/index.js',
@@ -14,7 +15,7 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // If production then minify and put css in main.css file.
-          process.env.NODE_ENV !== 'production'
+          process.env.NODE_ENV === 'production'
             ? 'style-loader'
             : MiniCssExtractPlugin.loader,
           {
@@ -37,6 +38,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
-    })
+    }),
+    new SassLintPlugin()
   ]
 };
