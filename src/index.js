@@ -1,3 +1,5 @@
 import './sass/style.scss';
 
-console.log('hello webpack yo');
+let demo = 'world';
+
+console.log(`hello ${demo}`);
