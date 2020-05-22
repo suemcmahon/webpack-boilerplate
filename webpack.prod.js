@@ -52,7 +52,6 @@ module.exports = merge(common, {
       chunkFilename: '[id].css'
     }),
     new SassLintPlugin(),
-    new HtmlWebpackPlugin(),
     new CleanWebpackPlugin()
   ]
 });

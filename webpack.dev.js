@@ -1,7 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const SassLintPlugin = require('sass-lint-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
@@ -51,9 +51,6 @@ module.exports = merge(common, {
   },
   plugins: [
     new SassLintPlugin(),
-    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-    new HtmlWebpackPlugin({
-      title: 'Development'
-    })
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false })
   ]
 });
