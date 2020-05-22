@@ -1,20 +1,15 @@
-const path = require('path');
+const merge = require('webpack-merge');
+const common = require('./webpack.common.js');
 const SassLintPlugin = require('sass-lint-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = {
+module.exports = merge(common, {
   mode: 'development',
-  entry: './src/index.js',
   devServer: {
     inline: true,
     contentBase: './dist'
   },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -61,4 +56,4 @@ module.exports = {
       title: 'Development'
     })
   ]
-};
+});
