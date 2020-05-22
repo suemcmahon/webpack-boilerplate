@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SassLintPlugin = require('sass-lint-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -54,6 +56,8 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new SassLintPlugin()
+    new SassLintPlugin(),
+    new HtmlWebpackPlugin(),
+    new CleanWebpackPlugin()
   ]
 };
