@@ -1,9 +1,15 @@
 const path = require('path');
 const SassLintPlugin = require('sass-lint-webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
+  devServer: {
+    inline: true,
+    contentBase: './dist'
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -49,6 +55,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new SassLintPlugin()
+    new SassLintPlugin(),
+    new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+    new HtmlWebpackPlugin({
+      title: 'Development'
+    })
   ]
 };
