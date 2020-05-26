@@ -1,7 +1,6 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SassLintPlugin = require('sass-lint-webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
@@ -50,7 +49,6 @@ module.exports = merge(common, {
       filename: '[name].css',
       chunkFilename: '[id].css'
     }),
-    new SassLintPlugin(),
     new CleanWebpackPlugin()
   ]
 });

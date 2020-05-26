@@ -1,7 +1,6 @@
 @use 'base/reset';
-
-$body-color: #070;
+@use 'base/fun';
 
 body {
-  background: $body-color;
+  background: fun.$body-color;
 }
