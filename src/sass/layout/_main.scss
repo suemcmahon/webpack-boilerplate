@@ -1,0 +1,14 @@
+@use '../base/variables';
+
+html {
+  font-size: variables.$base-font-size;
+}
+
+body {
+  font-size: variables.$body-font-size;
+  font-family: variables.$font-family;
+  background: variables.$body-background-colour;
+  color: variables.$body-colour;
+  display: grid;
+  place-items: center center;
+}

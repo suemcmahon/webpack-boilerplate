@@ -1,7 +1,16 @@
 import '../sass/style.scss';
 const sum = require('./sum');
-const demo = 'bow wow wow!';
 const answer = sum(1,2);
+const message = `1 + 2 equals ${answer}`;
+const grid = document.querySelector('.js-grid');
 
-console.log(`hello ${demo}`);
-console.log(`the sum is ${answer}`);
+const displayDemo = () => {
+  const div = document.createElement('div');
+  div.setAttribute('class', 'grid-item');
+  div.textContent = message;
+  return grid.appendChild(div);
+};
+
+displayDemo();
+
+console.log('Hello! Source maps are enabled in production for JS too!');
