@@ -1,7 +1,7 @@
 {
   "name": "front-end-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Front end boilerplate using webpack",
   "private": true,
   "sasslintConfig": ".sass-lint.yml",
   "scripts": {
@@ -9,8 +9,24 @@
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suemcmahon/webpack-boilerplate"
+  },
+  "keywords": [
+    "webpack",
+    "babel",
+    "webpack dev server",
+    "sass dart",
+    "eslint",
+    "autoprefixer",
+    "jest"
+  ],
   "author": "Sue McMahon",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suemcmahon/webpack-boilerplate/issues"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
